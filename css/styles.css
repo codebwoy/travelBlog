@@ -1,0 +1,151 @@
+ body {
+    padding: 50px;
+}
+#map {
+  height: 400px;
+  width: 100%;
+  /* height: 400px;
+  width: 600px; */
+  max-width: 100%;
+  max-height: 100%;
+  /* width: 960px;
+  height:500px; */
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+}
+
+@import url("https://unpkg.com/leaflet@1.9.4/dist/leaflet.css");
+ /* Bootstrap CSS  */
+ @import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css');
+
+@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet');
+ 
+
+body {
+  background-color: #fdede5;
+  font-family: "Arial", "Helvetica", sans-serif;
+   margin: 0;
+    line-height: 2; 
+}
+
+/* .Logo {
+  width: 200px;
+  height: 90px;
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+} */
+
+.navbar-brand {
+  color:rgb(5, 249, 168);
+  font-size: 40px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+
+.navbar-brand img {
+  border-radius: 20%; /* Round the corners of the logo image */
+  margin-right: 0.5px; /* Add some space between the logo and the text */
+  /* Add more styling properties as needed */
+  width: 110px;
+  height: 110px;
+}
+
+#hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#myVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  background-color: #f8f9fa;
+}
+@media (max-width: 576px) {
+  .dropdown-item::before {
+    transform: rotate(-90deg);
+  }
+}
+
+/* trying new thumbnail */
+
+.thumbnail-container {
+  position: relative;
+  width: fit-content; /* Adjust as needed */
+}
+
+/* Optional: Style for the text paragraphs */
+.thumbnail-text p {
+  margin: 0; /* Remove default margins */
+}
+
+.overlay-desc {
+    background: rgba(0,0,0,0);
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+/* passing marker on map */
+ var map = L.map('map').setView([51.5, -0.09], 13);
+
+        // Add the OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Add a marker to the map
+        var marker = L.marker([51.5, -0.09]).addTo(map); */
+
+
+
+        /* trying this code exams */
+
+        <div id="map"></div>
+
+    <script>
+        // Initialize the map
+        var map = L.map('map');
+
+        // Add the OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Get user's geolocation and center the map
+        if ("geolocation" in navigator) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var userLatLng = [position.coords.latitude, position.coords.longitude];
+                map.setView(userLatLng, 13);
+                L.marker(userLatLng).addTo(map);
+            });
+        } else {
+            // Fallback if geolocation is not supported
+            map.setView([51.5, -0.09], 13);
+            L.marker([51.5, -0.09]).addTo(map);

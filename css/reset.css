@@ -1,0 +1,26 @@
+/* Reset margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+/* Remove list styles */
+ul, ol {
+    list-style: none;
+}
+/* Reset typography */
+body {
+    font-family: Arial, sans-serif; /* Define a common font family */
+    font-size: 16px; /* Set a base font size */
+    line-height: 1.5; /* Set a base line height */
+}
+
+/* Reset headings */
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+/* Normalize text decoration */
+a {
+    text-decoration: none;
+}
