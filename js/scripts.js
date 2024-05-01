@@ -1,10 +1,10 @@
-
 // Initialize the map
-const map = L.map('map').setView([51.505, -0.09], 13);
+const map = L.map("map").setView([51.505, -0.09], 13);
 
 // Add OpenStreetMap tile layer
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution:
+    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
 
 // Add a marker
@@ -13,7 +13,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 //     .openPopup();
 
 // CSS Styles
-const style = document.createElement('style');
+const style = document.createElement("style");
 style.innerHTML = `
     #map {
         height: 400px;
@@ -22,56 +22,57 @@ style.innerHTML = `
 `;
 document.head.appendChild(style);
 
- document.addEventListener("DOMContentLoaded", function () {
-     const travelLocations = [
-         {
-             name: "Accra, Ghana",
-             imgSrc: "asset/ghana.jpeg",
-             travelDate: "01/01/2023",
-            description: "Explore the vibrant culture and landscapes of Ghana."
-         },
-         {
-            name: "Toronto, Canada",
-            imgSrc: "asset/toronto.jpg",
-            travelDate: "15/05/2023",
-            description: "Experience the beauty of Canada's natural wonders."
-        },
-        {
-            name: "Tokyo, Japan",
-            imgSrc: "asset/japan.jpeg",
-            travelDate: "23/09/2023",
-            description: "Discover the rich history and modern wonders of Japan."
-        },
-        {
-            name: "Sydney, Australia",
-            imgSrc: "asset/aussie.jpeg",
-            travelDate: "05/12/2023",
-            description: "Enjoy the sun, sea, and unique wildlife of Australia."
-        },
-        {
-            name: "Berlin, Germany",
-            imgSrc: "asset/germany.jpeg",
-            travelDate: "18/01/2024",
-            description: "Experience the culture, history, and beauty of Germany."
-        },
-        {
-            name: "Jerusalem, Israel",
-            imgSrc: "asset/israel.jpeg",
-            travelDate: "29/03/2024",
-            description: "Explore the historic sites and modern cities of Israel."
-        },
-        {
-            name: "Rio de Janeiro, Brazil",
-            imgSrc: "asset/brazil.jpeg",
-            travelDate: "10/04/2024",
-            description: "Dive into the vibrant culture and natural beauty of Brazil."
-        }
-    ];
+document.addEventListener("DOMContentLoaded", function () {
+  const travelLocations = [
+    {
+      name: "Accra, Ghana",
+      imgSrc: "asset/ghana.jpeg",
+      travelDate: "01/01/2023",
+      description: "Explore the vibrant culture and landscapes of Ghana.",
+    },
+    {
+      name: "Toronto, Canada",
+      imgSrc: "asset/toronto.jpg",
+      travelDate: "15/05/2023",
+      description: "Experience the beauty of Canada's natural wonders.",
+    },
+    {
+      name: "Tokyo, Japan",
+      imgSrc: "asset/japan.jpeg",
+      travelDate: "23/09/2023",
+      description: "Discover the rich history and modern wonders of Japan.",
+    },
+    {
+      name: "Sydney, Australia",
+      imgSrc: "asset/aussie.jpeg",
+      travelDate: "05/12/2023",
+      description: "Enjoy the sun, sea, and unique wildlife of Australia.",
+    },
+    {
+      name: "Berlin, Germany",
+      imgSrc: "asset/germany.jpeg",
+      travelDate: "18/01/2024",
+      description: "Experience the culture, history, and beauty of Germany.",
+    },
+    {
+      name: "Jerusalem, Israel",
+      imgSrc: "asset/israel.jpeg",
+      travelDate: "29/03/2024",
+      description: "Explore the historic sites and modern cities of Israel.",
+    },
+    {
+      name: "Rio de Janeiro, Brazil",
+      imgSrc: "asset/brazil.jpeg",
+      travelDate: "10/04/2024",
+      description:
+        "Dive into the vibrant culture and natural beauty of Brazil.",
+    },
+  ];
 
-    const travelCardsContainer = document.getElementById("travel-cards");
+  const travelCardsContainer = document.getElementById("travel-cards");
 
-    travelLocations.forEach((location) => {
-        const cardHtml = `
+  travelLocations.forEach((location) => {
+    const cardHtml = `
             <div class="col">
                 <div class="card">
                     <img src="${location.imgSrc}" class="card-img-top" alt="${location.name}" />
@@ -84,15 +85,9 @@ document.head.appendChild(style);
             </div>
         `;
 
-        travelCardsContainer.innerHTML += cardHtml;
-    });
+    travelCardsContainer.innerHTML += cardHtml;
+  });
 });
-
-
-
-
-
-
 
 // javascript to generate photos
 // Array of thumbnail image paths
@@ -116,20 +111,20 @@ document.head.appendChild(style);
 //     thumbnailPaths.forEach(function(path) {
 //         // Create an <img> element
 //         let imgElement = document.createElement('img');
-        
+
 //         // Set the src attribute to the path of the thumbnail image
 //         imgElement.src = path;
-        
+
 //         // Add Bootstrap classes to make the images responsive
 //         imgElement.classList.add('img-fluid', 'rounded');
-        
+
 //         // Create a <div> element to contain each thumbnail
 //         let divElement = document.createElement('div');
 //         divElement.classList.add('col');
-        
+
 //         // Append the <img> element to the <div> element
 //         divElement.appendChild(imgElement);
-        
+
 //         // Append the <div> element to the container
 //         container.appendChild(divElement);
 //     });
@@ -137,12 +132,6 @@ document.head.appendChild(style);
 
 // // Call the function to generate thumbnails when the page loads
 // window.onload = generateThumbnails;
-
-
-
-
-
-
 
 // new javaScript file
 
@@ -167,58 +156,57 @@ document.head.appendChild(style);
 //     });
 // });
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
-    const travelLocations = [
-        {
-            name: "Accra, Ghana",
-            imgSrc: "asset/ghana.jpeg",
-            travelDate: "01/01/2023",
-            description: "Explore the vibrant culture and landscapes of Ghana."
-        },
-        {
-            name: "Toronto, Canada",
-            imgSrc: "asset/toronto.jpeg",
-            travelDate: "15/05/2023",
-            description: "Experience the beauty of Canada's natural wonders."
-        },
-        {
-            name: "Tokyo, Japan",
-            imgSrc: "asset/japan.jpeg",
-            travelDate: "23/09/2023",
-            description: "Discover the rich history and modern wonders of Japan."
-        },
-        {
-            name: "Sydney, Australia",
-            imgSrc: "asset/aussie.jpeg",
-            travelDate: "05/12/2023",
-            description: "Enjoy the sun, sea, and unique wildlife of Australia."
-        },
-        {
-            name: "Berlin, Germany",
-            imgSrc: "asset/germany.jpeg",
-            travelDate: "18/01/2024",
-            description: "Experience the culture, history, and beauty of Germany."
-        },
-        {
-            name: "Jerusalem, Israel",
-            imgSrc: "asset/israel.jpeg",
-            travelDate: "29/03/2024",
-            description: "Explore the historic sites and modern cities of Israel."
-        },
-        {
-            name: "Rio de Janeiro, Brazil",
-            imgSrc: "asset/brazil.jpeg",
-            travelDate: "10/04/2024",
-            description: "Dive into the vibrant culture and natural beauty of Brazil."
-        }
-    ];
+  const travelLocations = [
+    {
+      name: "Accra, Ghana",
+      imgSrc: "asset/ghana.jpeg",
+      travelDate: "01/01/2023",
+      description: "Explore the vibrant culture and landscapes of Ghana.",
+    },
+    {
+      name: "Toronto, Canada",
+      imgSrc: "asset/toronto.jpeg",
+      travelDate: "15/05/2023",
+      description: "Experience the beauty of Canada's natural wonders.",
+    },
+    {
+      name: "Tokyo, Japan",
+      imgSrc: "asset/japan.jpeg",
+      travelDate: "23/09/2023",
+      description: "Discover the rich history and modern wonders of Japan.",
+    },
+    {
+      name: "Sydney, Australia",
+      imgSrc: "asset/aussie.jpeg",
+      travelDate: "05/12/2023",
+      description: "Enjoy the sun, sea, and unique wildlife of Australia.",
+    },
+    {
+      name: "Berlin, Germany",
+      imgSrc: "asset/germany.jpeg",
+      travelDate: "18/01/2024",
+      description: "Experience the culture, history, and beauty of Germany.",
+    },
+    {
+      name: "Jerusalem, Israel",
+      imgSrc: "asset/israel.jpeg",
+      travelDate: "29/03/2024",
+      description: "Explore the historic sites and modern cities of Israel.",
+    },
+    {
+      name: "Rio de Janeiro, Brazil",
+      imgSrc: "asset/brazil.jpeg",
+      travelDate: "10/04/2024",
+      description:
+        "Dive into the vibrant culture and natural beauty of Brazil.",
+    },
+  ];
 
-    const travelCardsContainer = document.getElementById("travel-cards");
+  const travelCardsContainer = document.getElementById("travel-cards");
 
-    travelLocations.forEach((location) => {
-        const cardHtml = `
+  travelLocations.forEach((location) => {
+    const cardHtml = `
             <div class="col-md-4">
                 <div class="card mb-4">
                     <img src="${location.imgSrc}" class="card-img-top" alt="${location.name}" />
@@ -231,10 +219,31 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         `;
 
-        travelCardsContainer.innerHTML += cardHtml;
-    });
+    travelCardsContainer.innerHTML += cardHtml;
+  });
 });
 
 
 
+// new location 
 
+document.getElementById('contact_form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+    
+    // Get form values
+    let firstName = document.getElementById('first_name').value;
+    let lastName = document.getElementById('last_name').value;
+    let email = document.getElementById('email_addr').value;
+    let phone = document.getElementById('phone_input').value;
+    let message = document.getElementById('message').value;
+    
+    // Create message to display in alert
+    const alertMessage = "First Name: " + firstName + "\n" +
+                       "Last Name: " + lastName + "\n" +
+                       "Email: " + email + "\n" +
+                       "Phone: " + phone + "\n" +
+                       "Message: " + message;
+    
+    // Display the message in a window alert
+    window.alert(`simon der Globetrotter says thank you: ${alertMessage}`);
+});

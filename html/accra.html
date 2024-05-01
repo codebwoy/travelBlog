@@ -30,16 +30,18 @@
     crossorigin=""/>
 
     <!--Leaflet JavaScript file  -->
-     <!-- Make sure you put this AFTER Leaflet's CSS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin=""></script>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+ integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+ crossorigin=""></script>
 
      <!-- Custom CSS -->
      <link rel="stylesheet" href="/css/styles.css">
      <link rel="stylesheet" href="/css/accra.css"> 
-     <link rel="stylesheet" href="/css/styles.css">  
+     <!-- <link rel="stylesheet" href="weather.css"> -->
+  
 
+    
 
 </head>
 
@@ -64,7 +66,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-bs-auto-close="outside"  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -74,64 +76,64 @@
                                 <li class="dropstart">
                                     <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">🌍 Africa</a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#" class="dropdown-item">🇬🇭 Ghana</a></li>
+                                        <li><a href="accra.html" class="dropdown-item">🇬🇭 Ghana</a></li>
                                     </ul>   
                                 </li>
 
                                 <li class="dropstart">
                                     <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">🌎 Americas</a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#" class="dropdown-item">🇨🇦 Canada</a></li>
+                                        <li><a href="toront.html" class="dropdown-item">🇨🇦 Canada</a></li>
                                     </ul>   
                                 </li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li class="dropstart">
                                     <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">🌏 Asia</a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#" class="dropdown-item">🇯🇵 Japan</a></li>
+                                        <li><a href="tokio.html" class="dropdown-item">🇯🇵 Japan</a></li>
                                     </ul>   
                                 </li>
 
                                 <li class="dropstart">
                                     <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">🌎 Carribean</a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#" class="dropdown-item">🇧🇷 Brazil</a></li>
+                                        <li><a href="rio.html" class="dropdown-item">🇧🇷 Brazil</a></li>
                                     </ul>   
                                 </li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li class="dropstart">
                                     <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">🌍 Europe</a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#" class="dropdown-item">🇩🇪 Germany</a></li>
-                                        <li><a href="#" class="dropdown-item">🇪🇸 Spain</a></li>
+                                        <li><a href="berln.html" class="dropdown-item">🇩🇪 Germany</a></li>
+                                        <li><a href="barca.html" class="dropdown-item">🇪🇸 Spain</a></li>
                                     </ul>   
                                 </li>
                                 <li class="dropstart">
                                     <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">🌏 Middle East</a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#" class="dropdown-item">🇮🇱 Israel</a></li>
+                                        <li><a href="jerus.html" class="dropdown-item">🇮🇱 Israel</a></li>
                                     </ul>   
                                 </li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li class="dropstart">
                                     <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">🌏 Oceania </a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="#" class="dropdown-item">🇦🇺 Australia</a></li>
+                                        <li><a href="sydni.html" class="dropdown-item">🇦🇺 Australia</a></li>
                                     </ul>   
                                 </li> 
                             </ul>
                             
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Gallery</a>
+                                <a class="nav-link" href="gallery.html">Gallery</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">About</a>
+                                <a class="nav-link" href="about.html">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contact</a>
+                                <a class="nav-link" href="contact.html">Contact</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">New Location</a>
+                                <a class="nav-link" href="newLoc.html">New Location</a>
                             </li>
                             
                          </li>
@@ -144,16 +146,7 @@
                 </div>
             </div>
         </nav>
-
-
-
-
-
-
-
-
-
-
+<!-- end of navigation bar -->
 
 <!-- grid layout starts here -->
 
@@ -195,11 +188,18 @@
           <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
           <div class="row">
             <!-- input from here -->
-            <div class="col-6 col-md-4">map here</div>
-            <div class="col-6 col-md-4">weather here</div>
+            <div class="col-6 col-md-4"><!-- Map Box API here -->
+              <div id="map"></div></div>
+            <div class="col-6 col-md-4">
+             
+             <p class="fs-5" style="color:red">For Current & Forecast Weather Data</p>
+              <button type="button" class="btn btn-dark btn-lg"><a href="weather.html" style="color: white;">🌡️ Click for your Weather today</a></button>
+
+          </div></div>
             <div class="col-6 col-md-4">activites in town here</div>
           </div>
         
+
           <!-- Columns are always 50% wide, on mobile and desktop -->
           <div class="row">
             <!-- input from here -->
@@ -325,5 +325,8 @@
 <!-- <script src="/js/scripts.js"></script>
 <script src="/js/ort.js"></script> -->
  <script src="weather.js"></script> 
+ <!-- Leaflet Initialization -->
+<script src="/js/leaflet-init.js"></script>
+<script src="weather.js"></script>
 </body>
 </html>

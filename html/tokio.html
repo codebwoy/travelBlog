@@ -1,250 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Simon der Globetrotter">
+    <meta name="Simon Boakye" content="simon" />
+<!-- Open Graph Data - Facebook protocol to provide richer metadata for websites -->
+    <meta property="og:title" content="Simon der Globetrotter is a travel blogger who journeys across all seven continents worldwide." />
+    <meta property="og:description" content="Simon der Globetrotter is a travel blogger who journeys across all seven continents worldwide." />
+    <meta property="og:image" content="/image.png" />
     <title>Simon der Globetrotter</title>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
+<!-- normalize css -->
+<link rel="stylesheet" href="/css/normalize.css">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/styles.css" />
-  </head>
-  <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand me-auto" href="#">
-          <img
-            src="/asset/globetrotter.png"
-            alt="Logo"
-            height="80"
-            class="d-inline-block align-left rounded-circle bg-light p-2"
-          />
-          Simon der Globetrotter
-        </a>
+<!-- css reset -->
+<link rel="stylesheet" href="/css/reset.css">
 
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+<!-- Font Api -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chewy&family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                href="home.html"
-                target="_self"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                >Destinations</a
-              >
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a class="dropdown-item" href="africa.html" target="_self"
-                    >Africa</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="americas.html" target="_self"
-                    >Americas</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="asia.html" target="_self"
-                    >Asia</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="caribbean.html" target="_self"
-                    >Caribbean</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="europe.html" target="_self"
-                    >Europe</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="middle.html" target="_self"
-                    >Middle East</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="oceania.html" target="_self"
-                    >Oceania</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="gallery.html" target="_self">Gallery</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html" target="_self">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html" target="_self">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <!-- leaflet Css file Map Api -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
 
-    <!-- Hero Section -->
-    <section id="hero" class="d-flex align-items-center">
-      <video autoplay muted loop id="myVideo">
-        <source src="/asset/toursite.mp4" type="video/mp4" />
-      </video>
-      <div
-        class="container position-absolute top-50 start-50 translate-middle"
-        data-aos="fade-up"
-        data-aos-delay="500"
-      >
-        <div class="penci-ctslider-content penci-fadeInUp">
-          <h2 class="pencislider-title">EXPLORE. EXPERIENCE. MARVEL.</h2>
-          <div class="pencislider-caption">
-            Travel with "Simon the Globetrotter" to discover new cultures,
-            landscapes, and unforgettable experiences, uncovering hidden gems
-            and marveling at the world's beauty.<br /><br />Please join us!
-          </div>
-          <div class="penci-slider_btnwrap">
-            <a
-              class="pencislider-btn pencislider-btn-2 penci-button"
-              href="/blog/"
-              ><span>START EXPLORING</span></a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
+    <!--Leaflet JavaScript file  -->
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+ integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+ crossorigin=""></script>
 
-    <!-- Cards will be populated here -->
-    <div class="container mt-5">
-      <div class="row row-cols-1 row-cols-md-3 g-4"></div>
-    </div>
+     <!-- Custom CSS -->
+     <link rel="stylesheet" href="/css/styles.css">
+     <link rel="stylesheet" href="/css/accra.css"> 
+     <!-- <link rel="stylesheet" href="weather.css"> -->
+  
 
-    <!-- Map Box API -->
-    <div id="map"></div>
+    
 
-    <!-- Website Content -->
-    <div class="container mt-5">
-      <h1>Simon der Globetrotter: The Man Who Never Stops Traveling</h1>
-      <p>
-        Meet Simon der Globetrotter, a man whose life is an endless adventure.
-        Simon has traveled to all seven continents and continues to explore the
-        world with an insatiable curiosity and a boundless spirit of adventure.
-        His journeys have taken him to the farthest corners of the Earth, from
-        the bustling streets of Tokyo to the serene landscapes of Antarctica.
-        Join us as we delve into the exciting life of Simon der Globetrotter and
-        discover the world through his eyes.
-      </p>
-    </div>
+</head>
 
-    <section id="travel-section">
-      <!-- Thumbnails of places -->
-      <div class="row row-cols-1 row-cols-md-3 g-4" id="travel-cards">
-        <!-- Content will be loaded here using JavaScript -->
-      </div>
-    </section>
-    <!-- section for thumbnail pics -->
-    <section id="travel-section">
-      <!-- Thumbnails of places -->
-      <div class="row row-cols-1 row-cols-md-3 g-4" id="travel-cards">
-        <!-- Content will be loaded here using JavaScript -->
-      </div>
-    </section>
 
-    <!-- Newsletter Section -->
-    <footer class="text-center mt-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 offset-md-3">
-            <h3>Subscribe to Our Newsletter</h3>
-            <p>
-              Subscribe to my newsletter for the latest blog posts, tips and
-              travel guides. Let's stay updated!.
-            </p>
 
-            <!-- Newsletter Form -->
-            <form>
-              <div class="input-group mb-3">
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="Enter your email"
-                  aria-label="Enter your email"
-                  required
-                />
-                <button class="btn btn-primary" type="submit">Subscribe</button>
+
+<body>
+        <!-- new try navigation here -->
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <!-- Logo on the left -->
+                <a class="navbar-brand me-auto" href="index.html">
+                    <img src="/asset/globetrotter.png" alt="Logo" height="100px" width="100px" class="d-inline-block align-left rounded-circle bg-info p-1">
+                    Simon der GlobeTrotter
+                </a>
+                <!-- Navbar toggler button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navbar links -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-auto-close="outside"  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Destinations
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="dropstart">
+                                    <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">🌍 Africa</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#" class="dropdown-item">🇬🇭 Ghana</a></li>
+                                    </ul>   
+                                </li>
+
+                                <li class="dropstart">
+                                    <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">🌎 Americas</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#" class="dropdown-item">🇨🇦 Canada</a></li>
+                                    </ul>   
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li class="dropstart">
+                                    <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">🌏 Asia</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#" class="dropdown-item">🇯🇵 Japan</a></li>
+                                    </ul>   
+                                </li>
+
+                                <li class="dropstart">
+                                    <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">🌎 Carribean</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#" class="dropdown-item">🇧🇷 Brazil</a></li>
+                                    </ul>   
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li class="dropstart">
+                                    <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">🌍 Europe</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#" class="dropdown-item">🇩🇪 Germany</a></li>
+                                        <li><a href="#" class="dropdown-item">🇪🇸 Spain</a></li>
+                                    </ul>   
+                                </li>
+                                <li class="dropstart">
+                                    <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">🌏 Middle East</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#" class="dropdown-item">🇮🇱 Israel</a></li>
+                                    </ul>   
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li class="dropstart">
+                                    <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">🌏 Oceania </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#" class="dropdown-item">🇦🇺 Australia</a></li>
+                                    </ul>   
+                                </li> 
+                            </ul>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">New Location</a>
+                            </li>
+                            
+                         </li>
+                    </ul>
+                    <!-- Search form -->
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+
+
+
+
+
+
+
+
+
+
+<!-- grid layout starts here -->
+
+        <div class="container">
+          <h1>📍Accra, Ghana</h1><p> 🕰️ 01.01.2023-15.01.2023</p>
+          <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+          <div class="row">
+            <!-- start input from here -->
+            <div class="col-md-8"><div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
               </div>
-            </form>
-
-            <p>We respect your privacy. Unsubscribe at any time.</p>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="/asset/Globetrotter photos/ghana/ghana.jpeg" class="d-block w-100" alt="indec">
+                </div>
+                <div class="carousel-item">
+                  <img src="/asset/Globetrotter photos/ghana/legon.jpeg" class="d-block w-100" alt="legon">
+                </div>
+                <div class="carousel-item">
+                  <img src="/asset/Globetrotter photos/ghana/oldbeach.jpeg" class="d-block w-100" alt="beach">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div></div>
+            <!-- second row -->
+            <div class="col-6 col-md-4"><h1>Accra:"Vibrant city blending tradition with modernity."</h1><p>Accra, the lively capital of Ghana, welcomes visitors to explore its rich history and culture, epitomized by the Kwame Nkrumah Mausoleum. This iconic landmark pays homage to Dr. Kwame Nkrumah, Ghana's founding father, whose visionary leadership led the country to independence. Surrounded by lush greenery and Accra's bustling skyline, the mausoleum invites reflection and reverence. Inside, exhibits and artifacts chronicle Nkrumah's life and Ghana's journey to nationhood. Tranquil gardens and cultural performances celebrate Ghanaian heritage, fostering unity and understanding. As the sun sets, the mausoleum's elegance and significance endure, promising an enlightening experience for history enthusiasts and curious travelers alike. </p></div>
           </div>
-        </div>
+        
+          <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+          <div class="row">
+            <!-- input from here -->
+            <div class="col-6 col-md-4"><!-- Map Box API here -->
+              <div id="map"></div></div>
+            <div class="col-6 col-md-4">
+              <h1>For your Weather forcast</h1>
+             
+
+              <button class="secondary"><a href="weather.html">Weather</a></button>
+            
+
+          </div></div>
+            <div class="col-6 col-md-4">activites in town here</div>
+          </div>
+        
+
+          <!-- Columns are always 50% wide, on mobile and desktop -->
+          <div class="row">
+            <!-- input from here -->
+            <div class="col-6"> 
+              <div class="card">
+                <img src="/asset/thumbnail/japan.jpeg" class="card-img-top" alt="Japan">
+                <div class="card-body">
+                  <h5 class="card-title">Tokyo,Japan</h5>
+                  <p class="card-text">Discover the rich history,futuristic city, iconic landmarks, diverse cuisine and modern wonders of Japan.</p>
+                  <p class="card-text">Visit Date: 23/05/2023</p>
+                </div>
+
+            </div></div>
+
+            <div class="col-6"><div class="card">
+              <img src="/asset/thumbnail/israel.jpeg" class="card-img-top" alt="Israel">
+              <div class="card-body">
+                <h5 class="card-title">Jerusalem,Israel</h5>
+                <p class="card-text">Explore the
+                    Sacred city, history, spirituality, diverse cultures, vibrant markets of Israel.</p>
+                <p class="card-text">Visit Date: 29/03/2023</p>
+              </div>
+            </div>
+
+          </div>
+
+
+<!-- second div row -->
+
+<div class="row">
+  <!-- input from here -->
+  <div class="col-6"> 
+    <div class="card">
+      <img src="/asset/thumbnail/aussie.jpeg" class="card-img-top" alt="Aussie">
+      <div class="card-body">
+        <h5 class="card-title">Sydney,Australia</h5>
+        <p class="card-text">Explore the vibrant culture, Picturesque harbor, vibrant wildlife and beautiful beaches of Australia. </p>
+        <p class="card-text">Visit Date: 01/09/2023</p>
       </div>
-    </footer>
 
-    <footer class="bg-dark text-white p-3 mt-4">
-      <p>&copy; Simon der Globetrotter 2024. All rights reserved.</p>
-    </footer>
+  </div></div>
 
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <div class="col-6"><div class="card">
+    <img src="/asset/thumbnail/toronto.jpeg" class="card-img-top" alt="toronto">
+    <div class="card-body">
+      <h5 class="card-title">Toronto, Canada</h5>
+      <p class="card-text">Experience the beauty of Canada's natural wonders, iconic landmarks and scenic waterfront.</p>
+      <p class="card-text">Visit Date: 15/07/2023</p>
+    </div>
+  </div>
 
-    <!-- Leaflet JS -->
-    <script
-      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-      crossorigin=""
-    ></script>
+</div>
 
-    <!-- Custom JS -->
-    <script src="/js/scripts.js"></script>
+<!-- third div row -->
 
-    <!-- Leaflet Initialization -->
-    <script src="/js/leaflet-init.js"></script>
 
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<div class="row">
+  <!-- input from here -->
+  <div class="col-6"> <div class="card">
+    <img src="/asset/thumbnail/germany.jpeg" class="card-img-top" alt="berlin">
+    <div class="card-body">
+      <h5 class="card-title">Berlin,Germany</h5>
+      <p class="card-text">Explore the historic sites,dynamic capital, art, nightlife, diverse cuisine, eclectic neighborhoods of Germany.
+      </p>
+      <p class="card-text">Visit Date: 17/01/2024</p>
+    </div>
 
-    <!-- Custom JavaScript -->
-    <script src="/js/scripts.js"></script>
+  
+  </div></div>
 
-    <!-- <script src="/asset/thumbnail/aussie.jpeg"></script>
-<script src="/asset/thumbnail/brazil.jpeg"></script>
-<script src="/asset/thumbnail/germany.jpg"></script>
-<script src="/asset/thumbnail/ghana.jpeg"></script>
-<script src="/asset/thumbnail/israel.jpg"></script>
-<script src="/asset/thumbnail/japan.jpeg"></script>
-<script src="/asset/thumbnail/toronto.jpg"></script> -->
-  </body>
+
+  <div class="col-6"><div class="card">
+    <img src="/asset/thumbnail/brazil.jpeg" class="card-img-top" alt="Rio de Janeiro">
+    <div class="card-body">
+      <h5 class="card-title">Rio de Janeiro, Brazil</h5>
+      <p class="card-text">Discover the colorful coastal city, beaches, mountains, culture, samba, Brazilian cuisine.</p>
+      <p class="card-text">Visit Date: 23/02/2024</p>
+    </div></div>  
+
+
+</div>
+        </div>
+
+
+
+
+<!-- Newsletter Section -->
+<footer class="text-center mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h3>Subscribe to my Newsletter</h3>
+                <p>Subscribe to my newsletter for the latest blog posts, tips and travel guides. Let's stay updated!.</p>
+
+                <!-- Newsletter Form -->
+                <form>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Enter your email" aria-label="Enter your email" required>
+                        <button class="btn btn-primary" type="submit">Subscribe</button>
+                    </div>
+                </form>
+
+                <p>We respect your privacy. Unsubscribe at any time.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<footer class="bg-dark text-white p-3 mt-4">
+    <p>&copy; Simon der Globetrotter 2024. All rights reserved.</p>
+    
+</footer>
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Link Bootstrap JS and JavaScript file -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+<script src="scripts.js"></script>
+
+<!-- Custom JS -->
+<script src="/js/ort.js"></script> 
+<!-- <script src="/js/scripts.js"></script>
+<script src="/js/ort.js"></script> -->
+ <script src="weather.js"></script> 
+ <!-- Leaflet Initialization -->
+<script src="/js/leaflet-init.js"></script>
+<script src="weather.js"></script>
+</body>
 </html>

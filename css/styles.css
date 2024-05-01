@@ -204,3 +204,10 @@ body {
               height: 50px;
           }
           
+
+          /* new location sytyle */
+
+          .col-12.green {
+            background: green;
+          }
+          
