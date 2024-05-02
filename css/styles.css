@@ -10,16 +10,6 @@
   max-height: 100%;
   /* width: 960px;
   height:500px; */
-
-
-  
-
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;
-    padding: 5px;
-    /* height: 450px;  */
-
 }
 
 footer {
@@ -51,7 +41,7 @@ body {
 
 .navbar-brand {
   color:rgb(5, 249, 168);
-  font-size: 40px;
+  font-size: larger;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: bold;
@@ -123,7 +113,7 @@ body {
 
 
 /* passing marker on map */
- var map = L.map('map').setView([51.5, -0.09], 13);
+ /* var map = L.map('map').setView([51.5, -0.09], 13);
 
         // Add the OpenStreetMap tile layer
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -137,9 +127,9 @@ body {
 
         /* trying this code exams */
 
-        <div id="map"></div>
+        <div id="map"></div> */
 
-    <script>
+    /* <script>
         // Initialize the map
         var map = L.map('map');
 
@@ -158,56 +148,14 @@ body {
         } else {
             // Fallback if geolocation is not supported
             map.setView([51.5, -0.09], 13);
-            L.marker([51.5, -0.09]).addTo(map);
+            L.marker([51.5, -0.09]).addTo(map); */
 
 
 
+
+    .carousel-item img.d-block {
+             
+              max-width: 500px;
+              max-height: 600px;
+            }
             
-
-
-
-
-
-
-
-
-            .forcast {
-              text-align: center;
-              margin: 50px auto;
-              width: 500px;
-          }
-          
-          h1 {
-              font-size: 2em;
-              margin-bottom: 20px;
-          }
-          
-          #current-weather {
-              margin-bottom: 30px;
-          }
-          
-          #forecast {
-              display: flex;
-              flex-wrap: wrap;
-              justify-content: space-around;
-          }
-          
-          .forecast-card {
-              padding: 10px;
-              border: 1px solid #ddd;
-              margin: 5px;
-              text-align: center;
-          }
-          
-          img {
-              width: 50px;
-              height: 50px;
-          }
-          
-
-          /* new location sytyle */
-
-          .col-12.green {
-            background: green;
-          }
-          

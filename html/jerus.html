@@ -37,8 +37,8 @@
 
      <!-- Custom CSS -->
      <link rel="stylesheet" href="/css/styles.css">
-     <link rel="stylesheet" href="/css/accra.css"> 
-     <!-- <link rel="stylesheet" href="weather.css"> -->
+     <!-- <link rel="stylesheet" href="/css/accra.css">  -->
+     <link rel="stylesheet" href="/css/weather.css">
   
 
     
@@ -55,7 +55,7 @@
             <div class="container-fluid">
                 <!-- Logo on the left -->
                 <a class="navbar-brand me-auto" href="index.html">
-                    <img src="/asset/globetrotter.png" alt="Logo" height="100px" width="100px" class="d-inline-block align-left rounded-circle bg-info p-1">
+                    <img src="/asset/globetrotter.png" alt="Logo" height="100px" width="100px" class="d-inline-block align-left rounded-circle bg-info p-1" >
                     Simon der GlobeTrotter
                 </a>
                 <!-- Navbar toggler button -->
@@ -151,7 +151,7 @@
 <!-- grid layout starts here -->
 
         <div class="container">
-          <h1>📍Accra, Ghana</h1><p> 🕰️ 01.01.2023-15.01.2023</p>
+          <p class="h3">📍Jerusalem, Israel</p><p class="h3"> 🕰️ 29.03.2023-12.04.2023</p>
           <!-- Stack the columns on mobile by making one full-width and the other half-width -->
           <div class="row">
             <!-- start input from here -->
@@ -163,13 +163,13 @@
               </div>
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="/asset/Globetrotter photos/ghana/ghana.jpeg" class="d-block w-100" alt="indec">
+                  <img src="/asset/Globetrotter photos/israel/asqaMosque.avif" class="d-block w-100" alt="asqaMosque ">
                 </div>
                 <div class="carousel-item">
-                  <img src="/asset/Globetrotter photos/ghana/legon.jpeg" class="d-block w-100" alt="legon">
+                  <img src="/asset/Globetrotter photos/israel/cam.avif" class="d-block w-100"  alt="camel">
                 </div>
                 <div class="carousel-item">
-                  <img src="/asset/Globetrotter photos/ghana/oldbeach.jpeg" class="d-block w-100" alt="beach">
+                  <img src="/asset/Globetrotter photos/israel/telAviv.jpg" class="d-block w-100"  alt="telAviv">
                 </div>
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -182,7 +182,9 @@
               </button>
             </div></div>
             <!-- second row -->
-            <div class="col-6 col-md-4"><h1>Accra:"Vibrant city blending tradition with modernity."</h1><p>Accra, the lively capital of Ghana, welcomes visitors to explore its rich history and culture, epitomized by the Kwame Nkrumah Mausoleum. This iconic landmark pays homage to Dr. Kwame Nkrumah, Ghana's founding father, whose visionary leadership led the country to independence. Surrounded by lush greenery and Accra's bustling skyline, the mausoleum invites reflection and reverence. Inside, exhibits and artifacts chronicle Nkrumah's life and Ghana's journey to nationhood. Tranquil gardens and cultural performances celebrate Ghanaian heritage, fostering unity and understanding. As the sun sets, the mausoleum's elegance and significance endure, promising an enlightening experience for history enthusiasts and curious travelers alike. </p></div>
+            <div class="col-6 col-md-4"><p class="h3">"Discover Jerusalem's rich history and spirituality in every corner."</p><p>
+              Explore the breathtaking beauty of the Old City of Jerusalem, where history and spirituality converge in a mesmerizing tapestry of sights and sounds. Wander through the labyrinthine streets lined with ancient stone buildings, each whispering tales of civilizations past. Marvel at the iconic Dome of the Rock, its golden hue gleaming in the sunlight against the azure sky. Lose yourself in the bustling markets, where the aroma of exotic spices mingles with the vibrant colors of fresh produce and handcrafted wares. With every step, you'll discover a new facet of this timeless city, where the past seamlessly intertwines with the present, creating an experience that will stay with you forever.
+               </p></div>
           </div>
         
           <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
@@ -193,17 +195,28 @@
             <div class="col-6 col-md-4">
              
              <p class="fs-5" style="color:red">For Current & Forecast Weather Data</p>
-              <button type="button" class="btn btn-dark btn-lg"><a href="jerusWeather.html" style="color: white;">🌡️ Click for your Weather today</a></button>
+              <div class="container-fluid">
+                <h1>Holy City of Jerusalem Weather</h1>
+                <div id="current-weather"></div>
+                <div id="forecast"></div>
+              </div>
 
-          </div></div>
-            <div class="col-6 col-md-4">ACTIVITIES IN THE CITY</div>
+
+              <button type="button" class="btn btn-dark btn-lg"><a href="https://www.itraveljerusalem.com/list/events" style="color: white;">🎤 Click for Jerusalem events</a></button></div>
+            </div>
+              
+
           </div>
+        </div>
         
-
+            <div class="col-6 col-md-4">
+          </div><br><br>
+        
+         
           <!-- Columns are always 50% wide, on mobile and desktop -->
-          <div class="row">
+          <div class="row justify-content-center">
             <!-- input from here -->
-            <div class="col-6"> 
+            <div class="col-4"> 
               <div class="card">
                 <img src="/asset/thumbnail/japan.jpeg" class="card-img-top" alt="Japan">
                 <div class="card-body">
@@ -214,7 +227,7 @@
 
             </div></div>
 
-            <div class="col-6"><div class="card">
+            <div class="col-4 "><div class="card">
               <img src="/asset/thumbnail/israel.jpeg" class="card-img-top" alt="Israel">
               <div class="card-body">
                 <h5 class="card-title">Jerusalem,Israel</h5>
@@ -229,9 +242,9 @@
 
 <!-- second div row -->
 
-<div class="row">
+<div class=" row justify-content-center ">
   <!-- input from here -->
-  <div class="col-6"> 
+  <div class="col-4"> 
     <div class="card">
       <img src="/asset/thumbnail/aussie.jpeg" class="card-img-top" alt="Aussie">
       <div class="card-body">
@@ -240,9 +253,10 @@
         <p class="card-text">Visit Date: 01/09/2023</p>
       </div>
 
-  </div></div>
+  </div>
+</div>
 
-  <div class="col-6"><div class="card">
+  <div class="col-4 "><div class="card">
     <img src="/asset/thumbnail/toronto.jpeg" class="card-img-top" alt="toronto">
     <div class="card-body">
       <h5 class="card-title">Toronto, Canada</h5>
@@ -256,9 +270,9 @@
 <!-- third div row -->
 
 
-<div class="row">
+<div class=" row justify-content-center">
   <!-- input from here -->
-  <div class="col-6"> <div class="card">
+  <div class="col-4"> <div class="card">
     <img src="/asset/thumbnail/germany.jpeg" class="card-img-top" alt="berlin">
     <div class="card-body">
       <h5 class="card-title">Berlin,Germany</h5>
@@ -268,10 +282,11 @@
     </div>
 
   
-  </div></div>
+  </div>
+</div>
 
 
-  <div class="col-6"><div class="card">
+  <div class="col-4 justify-content-center"><div class="card">
     <img src="/asset/thumbnail/brazil.jpeg" class="card-img-top" alt="Rio de Janeiro">
     <div class="card-body">
       <h5 class="card-title">Rio de Janeiro, Brazil</h5>
@@ -281,7 +296,7 @@
 
 
 </div>
-        </div>
+ </div>
 
 
 
@@ -321,12 +336,12 @@
 <script src="scripts.js"></script>
 
 <!-- Custom JS -->
-<script src="/js/ort.js"></script> 
+<!-- <script src="/js/ort.js"></script>  -->
 <!-- <script src="/js/scripts.js"></script>
 <script src="/js/ort.js"></script> -->
- <script src="weather.js"></script> 
+ <!-- <script src="weather.js"></script>  -->
  <!-- Leaflet Initialization -->
-<script src="/js/leaflet-init.js"></script>
-<script src="weather.js"></script>
+<!-- <script src="/js/leaflet-init.js"></script> -->
+<script src="/js/jerusWeather.js"></script>
 </body>
 </html>
