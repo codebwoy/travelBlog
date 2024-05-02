@@ -1,4 +1,7 @@
 
+body {
+    background-color: #fdede5;
+}
 .container-fluid{
     text-align: center;
     margin: 50px auto;
