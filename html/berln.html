@@ -36,12 +36,11 @@
  crossorigin=""></script>
 
      <!-- Custom CSS -->
-     <link rel="stylesheet" href="/..css/styles.css">  
-     <!-- <link rel="stylesheet" href="/css/accra.css">    -->
-     <link rel="stylesheet" href="../css/weather.css">  
+     <link rel="stylesheet" href="../css/styles.css">
+     <!-- <link rel="stylesheet" href="/css/accra.css">  -->
+     <link rel="stylesheet" href="../css/weather.css">
   
 </head>
-
 
 <body>
         <!-- new try navigation here -->
@@ -50,7 +49,7 @@
             <div class="container-fluid">
                 <!-- Logo on the left -->
                 <a class="navbar-brand me-auto" href="index.html">
-                    <img src="../asset/globetrotter.png" alt="Logo" height="100px" width="100px" class="d-inline-block justify-content-start bg-info p-1 display-4">  
+                    <img src="../asset/globetrotter.png" alt="Logo" height="100px" width="100px" class="d-inline-block align-left rounded-circle bg-info p-1" >
                     Simon der GlobeTrotter
                 </a>
                 <!-- Navbar toggler button -->
@@ -146,6 +145,7 @@
 <!-- grid layout starts here -->
 
         <div class="container">
+
           <p class="h3">📍Berlin, Germany</p><p class="h3"> 🕰️ 17.01.2024-17.02.2024</p>
           <!-- Stack the columns on mobile by making one full-width and the other half-width -->
           <div class="row">
@@ -156,16 +156,18 @@
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
               </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="../asset/Globetrotter photos/germany/claudio-schwarz-TScGhJM716g-unsplash.jpg" class="d-block w-100" alt="claudio-schwarz">
-                </div>
-                <div class="carousel-item">
-                  <img src="../asset/Globetrotter photos/germany/holocaust.avif" class="d-block w-100" alt="holocaust">
-                </div>
-                <div class="carousel-item">
-                  <img src="../asset/Globetrotter photos/germany/bundestag.avif" class="d-block w-100" alt="bundestag">
-                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="../asset/Globetrotter photos/germany/claudio-schwarz-TScGhJM716g-unsplash.jpg" class="d-block w-100" alt="claudio-schwarz">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="../asset/Globetrotter photos/germany/holocaust.avif" class="d-block w-100" alt="holocaust">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="../asset/Globetrotter photos/germany/bundestag.avif" class="d-block w-100" alt="bundestag">
+                    </div>
+
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -177,114 +179,117 @@
               </button>
             </div></div>
             <!-- second row -->
-            <div class="col-6 col-md-4"><p class="h3">"Berlin: Where History and Culture Converge Beautifully."</p><p>
-              Uncover the dynamic essence of Berlin, where history, culture, and creativity intertwine to craft an indelible mosaic of experiences. Begin your journey at the poignant Holocaust Memorial, a solemn tribute to the millions who perished, offering a powerful reminder of humanity's capacity for both tragedy and resilience. Explore the iconic Bundestag, symbolizing Germany's democratic spirit and inviting you to delve into its political heartbeat. Stand in awe before the majestic Brandenburg Gate, a timeless symbol of unity and freedom, framing the city's vibrant energy. Traverse the eclectic neighborhoods, where street art thrives, and savor the diverse culinary delights in bustling markets and trendy cafes. With its world-class museums, lively nightlife, and verdant parks, Berlin promises an adventure that resonates long after you depart. </p></div>
-          </div>
-        
+          <div class="col-6 col-md-4"><p class="h3">"Berlin: Where History and Culture Converge Beautifully."</p><p>
+            Uncover the dynamic essence of Berlin, where history, culture, and creativity intertwine to craft an indelible mosaic of experiences. Begin your journey at the poignant Holocaust Memorial, a solemn tribute to the millions who perished, offering a powerful reminder of humanity's capacity for both tragedy and resilience. Explore the iconic Bundestag, symbolizing Germany's democratic spirit and inviting you to delve into its political heartbeat. Stand in awe before the majestic Brandenburg Gate, a timeless symbol of unity and freedom, framing the city's vibrant energy. Traverse the eclectic neighborhoods, where street art thrives, and savor the diverse culinary delights in bustling markets and trendy cafes. With its world-class museums, lively nightlife, and verdant parks, Berlin promises an adventure that resonates long after you depart. </p></div>
+        </div>
+
+
           <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
           <div class="row">
             <!-- input from here -->
             <div class="col-6 col-md-4"><!-- Map Box API here -->
               <div id="map"></div></div>
             <div class="col-6 col-md-4">
-             <!-- your current forecast here -->
 
-            <div class="container-fluid">
-              <h1>Berlin City Weather</h1>
-              <div id="current-weather"></div>
-              <div id="forecast"></div>
-            </div>
+             <p class="fs-5" style="color:red">For Current & Forecast Weather Data</p>
+              <div class="container-fluid">
+                <h1>Berlin City Weather</h1>
+                <div id="current-weather"></div>
+                <div id="forecast"></div>
+              </div>
 
 
               <button type="button" class="btn btn-dark btn-lg"><a href="https://www.visitberlin.de/de/veranstaltungen-berlin" target="_blank" style="color: white;">🎤 Click for Berlin Events</a></button>
-             <br><br>
-          </div></div>
-            <div class="col-6 col-md-4"></div>
-          </div>
-        
+              <br><br>
+           </div></div>
+             <div class="col-6 col-md-4"></div>
+           </div>
+         
+ 
+           <!-- Columns are always 50% wide, on mobile and desktop -->
+           <div class="row justify-content-center">
+             <!-- input from here -->
+             <div class="col-4"> 
+               <div class="card">
+                 <a href="tokio.html"><img src="../asset/thumbnail/japan.jpeg" class="card-img-top" alt="Japan"></a>
+                 <div class="card-body">
+                   <h5 class="card-title">Tokyo,Japan</h5>
+                   <p class="card-text">Discover the rich history,futuristic city, iconic landmarks, diverse cuisine and modern wonders of Japan.</p>
+                   <p class="card-text">Visit Date: 23/05/2023</p>
+                 </div>
+ 
+             </div></div>
+ 
+             <div class="col-4"><div class="card">
+               <a href="jerus.html"><img src="../asset/thumbnail/israel.jpeg" class="card-img-top" alt="Israel"></a>
+               <div class="card-body">
+                 <h5 class="card-title">Jerusalem,Israel</h5>
+                 <p class="card-text">Explore the
+                     Sacred city, history, spirituality, diverse cultures, vibrant markets of Israel.</p>
+                 <p class="card-text">Visit Date: 29/03/2023</p>
+               </div>
+             </div>
+ 
+           </div>
+ 
+ 
+ <!-- second div row -->
+ 
+ <div class="row justify-content-center">
+   <!-- input from here -->
+   <div></div>
+   <div class="col-4"> 
+     <div class="card">
+       <a href="sydni.html"><img src="../asset/thumbnail/aussie.jpeg" class="card-img-top" alt="Aussie"></a>
+       <div class="card-body">
+         <h5 class="card-title">Sydney,Australia</h5>
+         <p class="card-text">Explore the vibrant culture, Picturesque harbor, vibrant wildlife and beautiful beaches of Australia. </p>
+         <p class="card-text">Visit Date: 01/09/2023</p>
+       </div>
+ 
+   </div></div>
+ 
+   <div class="col-4"><div class="card">
+     <a href="toront.html"><img src="../asset/thumbnail/toronto.jpeg" class="card-img-top" alt="toronto"></a>
+     <div class="card-body">
+       <h5 class="card-title">Toronto, Canada</h5>
+       <p class="card-text">Experience the beauty of Canada's natural wonders, iconic landmarks and scenic waterfront.</p>
+       <p class="card-text">Visit Date: 15/07/2023</p>
+     </div>
+   </div>
+ 
+ </div>
+ 
+ <!-- third div row -->
+ 
+ 
+ <div class="row justify-content-center">
+   <!-- input from here -->
+   <div class="col-4"> <div class="card">
+     <a href="barca.html"><img src="../asset/Globetrotter photos/barcelona/barcaOld.jpeg" class="card-img-top" alt="barca"></a>
+     <div class="card-body">
+       <h5 class="card-title">Barcelona,Spain</h5>
+       <p class="card-text">Explore the
+         Sacred city, history, spirituality, diverse cultures, vibrant markets of Barcelona.</p>
+         <p class="card-text">Visit Date: 29/03/2023</p>
+     </div>
+   
+   </div></div>
+ 
+ 
+   <div class="col-4"><div class="card">
+     <a href="rio.html"><img src="../asset/thumbnail/brazil.jpeg" class="card-img-top" alt="Rio de Janeiro"></a>
+     <div class="card-body">
+       <h5 class="card-title">Rio de Janeiro, Brazil</h5>
+       <p class="card-text">Discover the colorful coastal city, beaches, mountains, culture, samba, Brazilian cuisine.</p>
+       <p class="card-text">Visit Date: 23/02/2024</p>
+     </div></div>  
+ 
+ 
+ </div>
+         </div>           
 
-          <!-- Columns are always 50% wide, on mobile and desktop -->
-          <div class="row justify-content-center">
-            <!-- input from here -->
-            <div class="col-4"> 
-              <div class="card">
-                <a href="tokio.html"><img src="../asset/thumbnail/japan.jpeg" class="card-img-top" alt="Japan"></a>
-                <div class="card-body">
-                  <h5 class="card-title">Tokyo,Japan</h5>
-                  <p class="card-text">Discover the rich history,futuristic city, iconic landmarks, diverse cuisine and modern wonders of Japan.</p>
-                  <p class="card-text">Visit Date: 23/05/2023</p>
-                </div>
 
-            </div></div>
-
-            <div class="col-4"><div class="card">
-              <a href="jerus.html"><img src="../asset/thumbnail/israel.jpeg" class="card-img-top" alt="Israel"></a>
-              <div class="card-body">
-                <h5 class="card-title">Jerusalem,Israel</h5>
-                <p class="card-text">Explore the
-                    Sacred city, history, spirituality, diverse cultures, vibrant markets of Israel.</p>
-                <p class="card-text">Visit Date: 29/03/2023</p>
-              </div>
-            </div>
-
-          </div>
-
-
-<!-- second div row -->
-
-<div class="row justify-content-center">
-  <!-- input from here -->
-  <div></div>
-  <div class="col-4"> 
-    <div class="card">
-      <a href="sydni.html"><img src="../asset/thumbnail/aussie.jpeg" class="card-img-top" alt="Aussie"></a>
-      <div class="card-body">
-        <h5 class="card-title">Sydney,Australia</h5>
-        <p class="card-text">Explore the vibrant culture, Picturesque harbor, vibrant wildlife and beautiful beaches of Australia. </p>
-        <p class="card-text">Visit Date: 01/09/2023</p>
-      </div>
-
-  </div></div>
-
-  <div class="col-4"><div class="card">
-    <a href="toront.html"><img src="../asset/thumbnail/toronto.jpeg" class="card-img-top" alt="toronto"></a>
-    <div class="card-body">
-      <h5 class="card-title">Toronto, Canada</h5>
-      <p class="card-text">Experience the beauty of Canada's natural wonders, iconic landmarks and scenic waterfront.</p>
-      <p class="card-text">Visit Date: 15/07/2023</p>
-    </div>
-  </div>
-
-</div>
-
-<!-- third div row -->
-
-
-<div class="row justify-content-center">
-  <!-- input from here -->
-  <div class="col-4"> <div class="card">
-    <a href="barca.html"><img src="../asset/Globetrotter photos/barcelona/barcaOld.jpeg" class="card-img-top" alt="barca"></a>
-    <div class="card-body">
-      <h5 class="card-title">Barcelona,Spain</h5>
-      <p class="card-text">Explore the
-        Sacred city, history, spirituality, diverse cultures, vibrant markets of Barcelona.</p>
-        <p class="card-text">Visit Date: 29/03/2023</p>
-    </div>
-  
-  </div></div>
-
-
-  <div class="col-4"><div class="card">
-    <a href="rio.html"><img src="../asset/thumbnail/brazil.jpeg" class="card-img-top" alt="Rio de Janeiro"></a>
-    <div class="card-body">
-      <h5 class="card-title">Rio de Janeiro, Brazil</h5>
-      <p class="card-text">Discover the colorful coastal city, beaches, mountains, culture, samba, Brazilian cuisine.</p>
-      <p class="card-text">Visit Date: 23/02/2024</p>
-    </div></div>  
-
-
-</div>
-        </div>
 
 
 <!-- Newsletter Section -->
@@ -319,14 +324,11 @@
 
 <!-- Link Bootstrap JS and JavaScript file -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
-<script src="../js/leaflet-init.js"></script>
+<script src="scripts.js"></script>
 
 <!-- Custom JS -->
 
- <script src="../js/berlnWeather.js"></script>
- <script src="../js/scripts.js"></script>
-
-
-
+<!-- <script src="../js/barcaWeather.js"></script> -->
+<script src="../js/berlnWeather.js"></script>
 </body>
 </html>
