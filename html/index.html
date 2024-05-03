@@ -159,12 +159,17 @@
         <source src="/asset/torsitesTravBlog.mp4" type="video/mp4">
     </video>
     <div class="container position-absolute top-50 start-50 translate-middle" data-aos="fade-up" data-aos-delay="500">
-        <div class="penci-ctslider-content penci-fadeInUp" style="background-color: white; font-size: 24px; font-family: 'Arial', sans-serif;">
-            <h2 class="overlay-desc" style="color: black;">EXPLORE. EXPERIENCE. MARVEL.</h2>
-            <div class="pencislider-caption" style="color: black;">Travel with "Simon the Globetrotter" to discover new cultures, landscapes, and unforgettable experiences, uncovering hidden gems and marveling at the world's beauty.<br><br>Please join us!</div>
-            <div class="penci-slider_btnwrap">
-                <a class="pencislider-btn pencislider-btn-2 penci-button" href="/blog/" style="background-color: black;"><span style="color: white;">START EXPLORING</span></a>
+        <div class="penci-ctslider-content penci-fadeInUp" style="background-color: rgba(92, 91, 91, 0.5); font-size: 24px; font-family: 'Arial', sans-serif;">
+            <h2 class="overlay-desc" style="color: rgb(9, 238, 55);">EXPLORE. EXPERIENCE. MARVEL.</h2>
+            <div class="pencislider-caption" style="color: rgb(252, 247, 247);">Travel with "Simon the Globetrotter" to discover new cultures, landscapes, and unforgettable experiences, uncovering hidden gems and marveling at the world's beauty.<br><br><br></div>
+           
+
+            <div class="penci-slider_btnwrap" style="text-align: center;">
+                <a class="pencislider-btn pencislider-btn-2 penci-button" href="/blog/">
+                    <span style="color: rgb(236, 5, 5);">START EXPLORING</span>
+                </a>
             </div>
+            
         </div>
         
     </div>
@@ -175,80 +180,21 @@
 <!-- introduction message -->
     <h1>Simon der Globetrotter: The Man Who Never Stops Traveling</h1>
     <p>Meet Simon der Globetrotter, a man whose life is an endless adventure. Simon has traveled to all seven continents and continues to explore the world with an insatiable curiosity and a boundless spirit of adventure. His journeys have taken him to the farthest corners of the Earth, from the bustling streets of Tokyo to the serene landscapes of Antarctica. Join us as we delve into the exciting life of Simon der Globetrotter and discover the world through his eyes.</p>
-</div>
+ </div>
+
+   
+
+
+ 
+
 
 <!-- Map Box API here -->
 <div id="map"></div>
 
-<div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(-19px, 0px, 0px);"><div class="leaflet-pane leaflet-tile-pane"></div>
-<!-- adding marking on maps -->
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // Initialize the Leaflet map
-        var map = L.map('map').setView([0, 0], 2); // Set the initial view to center of the world with zoom level 2
-    
-        // Add the OpenStreetMap base layer to the map
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-    
-        // Define a custom marker icon
-        var customIcon = L.icon({
-            iconUrl: 'html/marker.svg', // Replace 'path/to/your/marker-logo.png' with the path to your custom marker icon image file
-            iconSize: [32, 32], // Set the size of your marker icon (width, height)
-            iconAnchor: [16, 32], // Set the anchor point of the icon, usually half of the iconSize
-            popupAnchor: [0, -32] // Set the popup anchor relative to the icon anchor
-        });
-    
-        // Define an array of locations with their coordinates
-        const locations = [
-            { name: "Toronto, Canada", coordinates: [43.653908, -79.384293] },
-            { name: "Accra, Ghana", coordinates: [5.614818, -0.205874] },
-            { name: "Berlin, Germany", coordinates: [52.520008,13.404954] },
-            { name: "Jerusalem, Israel", coordinates: [31.771959,35.217018] },
-            { name: "Tokyo, Japan", coordinates: [35.652832,139.839478] },
-            { name: "Rio de Janeiro, Brazil", coordinates: [-22.908333,-43.196388]}
-        ];
-      
-    
-        // Loop through each location and add a marker with custom icon to the map
-        locations.forEach(location => {
-            L.marker(location.coordinates, { icon: customIcon }).addTo(map).bindPopup(location.name);
-        });
-    });
-    </script>
-    
 
 
 
- <script>document.addEventListener("DOMContentLoaded", function () {
-    // Initialize the Leaflet map
-    var map = L.map('map').setView([0, 0], 2); // Set the initial view to center of the world with zoom level 2
 
-    // Add the OpenStreetMap base layer to the map
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
-
-    // Define an array of locations with their coordinates
-    const locations = [
-        { name: "Toronto, Canada", coordinates: [43.65107, -79.347015] },
-        { name: "Accra, Ghana", coordinates: [5.6037, -0.187] },
-        { name: "Berlin, Germany", coordinates: [52.520008, 13.404954] },
-        { name: "Jerusalem, Israel", coordinates: [31.7683, 35.2137] },
-        { name: "Tokyo, Japan", coordinates: [35.6895, 139.6917] },
-        { name: "Rio de Janeiro, Brazil", coordinates: [-22.9068, -43.1729] }
-    ];
-
-    // Loop through each location and add a marker to the map
-    locations.forEach(location => {
-        L.marker(location.coordinates).addTo(map).bindPopup(location.name);
-    });
-});
-</script> 
-
- 
  <!-- Travel Cards will be dynamically added here -->
     </div>
 </div>

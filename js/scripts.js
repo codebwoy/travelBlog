@@ -89,73 +89,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// javascript to generate photos
-// Array of thumbnail image paths
-// let thumbnailPaths = [
-//     "/asset/aussie.jpeg",
-//     "/asset/toronto.jpeg",
-//     "/asset/japan.jpeg",
-//     "/asset/israel.jpeg",
-//     "/asset/ghana.jpeg",
-//     "/asset/germany.jpeg",
-//     "/asset/brazil.jpeg",
-//     // Add more paths as needed
-// ];
-
-// // Function to generate thumbnail photos
-// function generateThumbnails() {
-//     // Get the container element for thumbnails
-//     let container = document.querySelector('#travel-cards');
-
-//     // Loop through the array of thumbnail paths
-//     thumbnailPaths.forEach(function(path) {
-//         // Create an <img> element
-//         let imgElement = document.createElement('img');
-
-//         // Set the src attribute to the path of the thumbnail image
-//         imgElement.src = path;
-
-//         // Add Bootstrap classes to make the images responsive
-//         imgElement.classList.add('img-fluid', 'rounded');
-
-//         // Create a <div> element to contain each thumbnail
-//         let divElement = document.createElement('div');
-//         divElement.classList.add('col');
-
-//         // Append the <img> element to the <div> element
-//         divElement.appendChild(imgElement);
-
-//         // Append the <div> element to the container
-//         container.appendChild(divElement);
-//     });
-// }
-
-// // Call the function to generate thumbnails when the page loads
-// window.onload = generateThumbnails;
-
-// new javaScript file
-
-// document.addEventListener("DOMContentLoaded", function () {
-//     // Define destinations array with links
-//     const destinations = [
-//         { name: "Africa", link: "/html/africa.html" },
-//         { name: "Americas", link: "/html/americas.html" },
-//         { name: "Asia", link: "/html/asia.html" },
-//         { name: "Caribbean", link: "/africa/caribbean.html" },
-//         { name: "Europe", link: "/html/europe.html" },
-//         { name: "Middle East", link: "/html/middle.html" },
-//         { name: "Oceania", link: "/html/oceania.html" }
-//     ];
-
-//     // Populate dropdown menu with destinations
-//     const dropdownMenu = document.getElementById("destinationMenu");
-//     destinations.forEach(destination => {
-//         const listItem = document.createElement("li");
-//         listItem.innerHTML = `<a class="dropdown-item" href="${destination.link}" target="_self">${destination.name}</a>`;
-//         dropdownMenu.appendChild(listItem);
-//     });
-// });
-
 document.addEventListener("DOMContentLoaded", function () {
   const travelLocations = [
     {
@@ -223,27 +156,73 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// new location
 
-
-// new location 
-
-document.getElementById('contact_form').addEventListener('submit', function(event) {
+document
+  .getElementById("contact_form")
+  .addEventListener("submit", function (event) {
     event.preventDefault(); // Prevent the form from submitting normally
-    
+
     // Get form values
-    let firstName = document.getElementById('first_name').value;
-    let lastName = document.getElementById('last_name').value;
-    let email = document.getElementById('email_addr').value;
-    let phone = document.getElementById('phone_input').value;
-    let message = document.getElementById('message').value;
-    
+    let firstName = document.getElementById("first_name").value;
+    let lastName = document.getElementById("last_name").value;
+    let email = document.getElementById("email_addr").value;
+    let phone = document.getElementById("phone_input").value;
+    let message = document.getElementById("message").value;
+
     // Create message to display in alert
-    const alertMessage = "First Name: " + firstName + "\n" +
-                       "Last Name: " + lastName + "\n" +
-                       "Email: " + email + "\n" +
-                       "Phone: " + phone + "\n" +
-                       "Message: " + message;
-    
+    const alertMessage =
+      "First Name: " +
+      firstName +
+      "\n" +
+      "Last Name: " +
+      lastName +
+      "\n" +
+      "Email: " +
+      email +
+      "\n" +
+      "Phone: " +
+      phone +
+      "\n" +
+      "Message: " +
+      message;
+
     // Display the message in a window alert
     window.alert(`simon der Globetrotter says thank you: ${alertMessage}`);
+  });
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Initialize the Leaflet map
+  var map = L.map("map").setView([0, 0], 2); // Set the initial view to center of the world with zoom level 2
+
+  // Add the OpenStreetMap base layer to the map
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution:
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  }).addTo(map);
+
+  // Define a custom marker icon
+  var customIcon = L.icon({
+    iconUrl: "asset/thumbnail/marker.svg", // Replace 'path/to/your/marker-logo.png' with the path to your custom marker icon image file
+    iconSize: [32, 32], // Set the size of your marker icon (width, height)
+    iconAnchor: [16, 32], // Set the anchor point of the icon, usually half of the iconSize
+    popupAnchor: [0, -32], // Set the popup anchor relative to the icon anchor
+  });
+
+  // Define an array of locations with their coordinates
+  const locations = [
+    { name: "Toronto, Canada", coordinates: [43.653908, -79.384293] },
+    { name: "Accra, Ghana", coordinates: [5.614818, -0.205874] },
+    { name: "Berlin, Germany", coordinates: [52.520008, 13.404954] },
+    { name: "Jerusalem, Israel", coordinates: [31.771959, 35.217018] },
+    { name: "Tokyo, Japan", coordinates: [35.652832, 139.839478] },
+    { name: "Rio de Janeiro, Brazil", coordinates: [-22.908333, -43.196388] },
+  ];
+
+  // Loop through each location and add a marker with custom icon to the map
+  locations.forEach((location) => {
+    L.marker(location.coordinates, { icon: customIcon })
+      .addTo(map)
+      .bindPopup(location.name);
+  });
 });

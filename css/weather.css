@@ -1,0 +1,44 @@
+
+/* .container-fluid {
+  text-align: center;
+  margin: 50px auto;
+  width: 500px;
+} */
+
+.container-fluid h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+#current-weather {
+  margin-bottom: 30px;
+}
+
+#forecast {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.forecast-card {
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin: 5px;
+  text-align: center;
+}
+
+.container-fluid_img {
+  width: 50px;
+  height: 50px;
+  
+}
+
+
+
+/* 
+nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <!-- Logo on the left -->
+                <a class="navbar-brand me-auto" href="index.html">
+                    <img src="/asset/globetrotter.png" alt="Logo" height="100px" width="100px" class="d-inline-block justify-content-start bg-info p-1">  
+                    Simon der */

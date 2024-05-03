@@ -1,0 +1,160 @@
+body {
+  padding: 50px;
+  background-color: #fdede5;
+  font-family: "Arial", "Helvetica", sans-serif;
+  margin: 0;
+  line-height: 2;
+}
+#map {
+  height: 400px;
+  width: 100%;
+   height: 400px;
+  width: 600px; 
+  max-width: 100%;
+  max-height: 100%;
+ 
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 5px;
+  /* height: 450px;  */
+}
+
+footer {
+  background-color: #f8f9fa;
+  padding: 40px 0;
+}
+
+ .Logo {
+  width: 200px;
+  height: 90px;
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+} 
+
+.navbar-brand {
+  color: rgb(5, 249, 168);
+  font-size: 40px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+.navbar-brand img {
+  border-radius: 20%; /* Round the corners of the logo image */
+  margin-right: 0.5px; /* Add some space between the logo and the text */
+  /* Add more styling properties as needed */
+  width: 110px;
+  height: 110px;
+}
+
+#hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#myVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  background-color: #f8f9fa;
+}
+@media (max-width: 576px) {
+  .dropdown-item::before {
+    transform: rotate(-90deg);
+  }
+}
+
+/* trying new thumbnail */
+
+.thumbnail-container {
+  position: relative;
+  width: fit-content; /* Adjust as needed */
+}
+
+/* Optional: Style for the text paragraphs */
+.thumbnail-text p {
+  margin: 0; /* Remove default margins */
+}
+
+.overlay-desc {
+  background: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --size: 400px;
+}
+
+.weather {
+  width: var(--size);
+  height: var(--size);
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+}
+
+.temperature {
+  border: 1px solid white;
+  padding: 20px;
+}
+
+/* weather styles */
+
+.container {
+  text-align: center;
+  margin: 50px auto;
+  width: 500px;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+#current-weather {
+  margin-bottom: 30px;
+}
+
+#forecast {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.forecast-card {
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin: 5px;
+  text-align: center;
+}
+
+.container-fluid_img {
+  width: 500px;
+  height: 500px;
+} 
